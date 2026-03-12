@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Hide cancelled Amazon orders",
+  "version": "1.0",
+  "description": "Hides cancelled orders from your Amazon order history",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*", "https://www.amazon.co.uk/*", "https://www.amazon.de/*", "https://www.amazon.fr/*", "https://www.amazon.ca/*", "https://www.amazon.com.au/*"],
+      "js": ["content.js"],
+"run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
